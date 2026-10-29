@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.hexa.songsplayer",
+      "sha256_cert_fingerprints": [
+        "E0:AE:A9:A7:82:8C:11:A5:11:7F:F6:29:F7:E3:91:A0:29:E7:70:06:41:2B:DE:28:4A:9E:67:77:4C:03:1C:7B"
+      ]
+    }
+  }
+]

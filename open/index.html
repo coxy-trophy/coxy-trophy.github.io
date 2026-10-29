@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open in Psalmist</title>
+<meta name="description" content="A song, lyric or playlist shared from Psalmist.">
+<meta property="og:title" content="Shared from Psalmist">
+<meta property="og:description" content="Listen in Psalmist, the app for the music on jw.org.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box;
+         background: #09090C; color: #F4F4F5; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .card { width: 100%; max-width: 420px; text-align: center; }
+  .logo { width: 104px; height: 104px; border-radius: 30px; margin: 0 auto 24px;
+          background: linear-gradient(135deg, #7C5CFF, #E4489A 60%, #FF6B6B); }
+  .logo svg { width: 104px; height: 104px; }
+  h1 { font-size: 24px; margin: 0 0 8px; overflow-wrap: anywhere; }
+  p { color: #A1A1AA; margin: 0 0 24px; line-height: 1.5; }
+  blockquote { margin: 0 0 24px; padding: 16px 18px; border-radius: 14px; background: #18181B; color: #F4F4F5;
+               font-size: 18px; line-height: 1.5; font-weight: 600; text-align: left; white-space: pre-line; }
+  blockquote:empty { display: none; }
+  a.open { display: block; padding: 15px; border-radius: 14px; background: #FF4F7B; color: #fff;
+           text-decoration: none; font-weight: 700; font-size: 17px; }
+  a.get { display: inline-block; margin-top: 18px; color: #C4B5FD; text-decoration: none; }
+  small { display: block; margin-top: 40px; color: #71717A; }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 108 108" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M33,33 Q54,27 75,33" stroke-width="4"/>
+      <path d="M40,77 C33,66 29,50 36,40 C38,37 37,33 34,31" stroke-width="4.5"/>
+      <path d="M68,77 C75,66 79,50 72,40 C70,37 71,33 74,31" stroke-width="4.5"/>
+      <path d="M38,74 Q38,82 54,82 Q70,82 70,74 Z" fill="#fff" stroke-width="2"/>
+      <path d="M44,32.6 L49,74 M49,31.2 L51.5,74 M54,30.8 L54,74 M59,31.2 L56.5,74 M64,32.6 L59,74" stroke-width="1.8"/>
+    </svg>
+  </div>
+  <h1 id="title">Shared from Psalmist</h1>
+  <blockquote id="lyric"></blockquote>
+  <p id="detail">Open it in the Psalmist app.</p>
+  <a class="open" id="open" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Open in Psalmist</a>
+  <a class="get" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Don't have Psalmist? Download it for Android</a>
+  <small>Psalmist is an unofficial app for the music published on jw.org.</small>
+</main>
+<script>
+  // Everything is in the link after "#"; nothing is sent anywhere.
+  // #s=<song id>&t=<title>[&l=<lyric lines>]  or  #p=<base64url playlist JSON {n,t}>
+  // With Psalmist installed, Android opens these links in the app directly and this
+  // page isn't shown. It appears only without the app (or in browsers that don't hand off).
+  var params = new URLSearchParams(location.hash.slice(1));
+  var download = "https://github.com/coxy-trophy/psalmist-releases/releases/latest";
+  var title = document.getElementById("title"), detail = document.getElementById("detail");
+  if (params.has("p")) {
+    try {
+      var b64 = params.get("p").replace(/-/g, "+").replace(/_/g, "/");
+      var bytes = Uint8Array.from(atob(b64), function (c) { return c.charCodeAt(0); });
+      var list = JSON.parse(new TextDecoder().decode(bytes));
+      title.textContent = "“" + list.n + "”";
+      detail.textContent = list.t.length + " songs, shared from Psalmist.";
+    } catch (e) {}
+  } else if (params.has("s")) {
+    title.textContent = params.get("t") || "A song shared from Psalmist";
+    if (params.has("l")) {
+      document.getElementById("lyric").textContent = params.get("l");
+      detail.textContent = "A lyric shared from Psalmist.";
+    } else {
+      detail.textContent = "A song shared from Psalmist.";
+    }
+  }
+  if (/Android/i.test(navigator.userAgent) && location.hash.length > 1) {
+    var intent = "intent://open?" + location.hash.slice(1) + "#Intent;scheme=psalmist;package=com.hexa.songsplayer;S.browser_fallback_url="
+               + encodeURIComponent(download) + ";end";
+    document.getElementById("open").href = intent;
+  }
+</script>
+</body>
+</html>
