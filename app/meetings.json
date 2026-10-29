@@ -1,0 +1,229 @@
+{
+ "generated": "2026-10-29T15:21:11.468679+00:00",
+ "weeks": [
+  {
+   "monday": "2026-10-19",
+   "dates": "October 19-25",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Jeremiah 45-46",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 21
+     },
+     {
+      "label": "Middle song",
+      "number": 117
+     },
+     {
+      "label": "Closing song",
+      "number": 87
+     }
+    ],
+    "videos": [
+     {
+      "pub": "pk",
+      "issue": null,
+      "track": 10,
+      "title": "Become Jehovah’s Friend​—Be Kind and Share"
+     }
+    ]
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "An Appeal on the Basis of Love",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 106
+     },
+     {
+      "label": "Closing song",
+      "number": 154
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-10-26",
+   "dates": "October 26–November 1",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Jeremiah 47-48",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 125
+     },
+     {
+      "label": "Middle song",
+      "number": 158
+     },
+     {
+      "label": "Closing song",
+      "number": 54
+     }
+    ],
+    "videos": []
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "Cherish “the Privilege of Fearlessly Rendering Sacred Service”",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 62
+     },
+     {
+      "label": "Closing song",
+      "number": 159
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-11-02",
+   "dates": "November 2-8",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Jeremiah 49-50",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 1
+     },
+     {
+      "label": "Middle song",
+      "number": 44
+     },
+     {
+      "label": "Closing song",
+      "number": 33
+     }
+    ],
+    "videos": [
+     {
+      "pub": "jwb-107",
+      "issue": null,
+      "track": 7,
+      "title": ""
+     }
+    ]
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "Trust In Jehovah for Protection",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 3
+     },
+     {
+      "label": "Closing song",
+      "number": 8
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-11-09",
+   "dates": "November 9-15",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Jeremiah 51-52",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 98
+     },
+     {
+      "label": "Middle song",
+      "number": 10
+     },
+     {
+      "label": "Closing song",
+      "number": 150
+     }
+    ],
+    "videos": [
+     {
+      "pub": "mwbv",
+      "issue": "202611",
+      "track": 1,
+      "title": "Giving Glorifies Jehovah"
+     }
+    ]
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "How to Develop “an Obedient Heart”",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 36
+     },
+     {
+      "label": "Closing song",
+      "number": 88
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-11-16",
+   "dates": "November 16-22",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Lamentations 1-2",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 28
+     },
+     {
+      "label": "Middle song",
+      "number": 90
+     },
+     {
+      "label": "Closing song",
+      "number": 75
+     }
+    ],
+    "videos": [
+     {
+      "pub": "nwtsv",
+      "issue": null,
+      "track": 250,
+      "title": "Introduction to Lamentations"
+     },
+     {
+      "pub": "jwbai",
+      "issue": "201511",
+      "track": 1,
+      "title": "Encourage the Inactive Ones"
+     }
+    ]
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "Sharing the Good News in “All the Languages of the Nations”",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 84
+     },
+     {
+      "label": "Closing song",
+      "number": 57
+     }
+    ],
+    "videos": []
+   }
+  }
+ ]
+}

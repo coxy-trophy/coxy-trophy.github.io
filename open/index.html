@@ -41,7 +41,8 @@
   <blockquote id="lyric"></blockquote>
   <p id="detail">Open it in the Psalmist app.</p>
   <a class="open" id="open" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Open in Psalmist</a>
-  <a class="get" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Don't have Psalmist? Download it for Android</a>
+  <a class="get" id="web" href="/app/" hidden>On iPhone or a computer? Open Psalmist on the web</a>
+  <br><a class="get" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Don't have Psalmist? Download it for Android</a>
   <br><a class="get" id="jw" hidden>Or listen on jw.org</a>
   <small>Psalmist is an unofficial app for the music published on jw.org.</small>
 </main>
@@ -74,6 +75,13 @@
     var jw = document.getElementById("jw");
     jw.href = "https://www.jw.org/finder?docid=" + params.get("j");
     jw.hidden = false;
+  }
+  // Not Android: the web version of Psalmist opens the same link.
+  if (!/Android/i.test(navigator.userAgent)) {
+    var web = document.getElementById("web");
+    web.href = "/app/#/open?" + location.hash.slice(1);
+    web.hidden = false;
+    document.getElementById("open").href = web.href;
   }
   if (/Android/i.test(navigator.userAgent) && location.hash.length > 1) {
     var intent = "intent://open?" + location.hash.slice(1) + "#Intent;scheme=psalmist;package=com.hexa.songsplayer;S.browser_fallback_url="
