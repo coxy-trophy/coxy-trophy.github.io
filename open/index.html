@@ -41,7 +41,7 @@
   <blockquote id="lyric"></blockquote>
   <p id="detail">Open it in the Psalmist app.</p>
   <a class="open" id="open" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Open in Psalmist</a>
-  <a class="get" id="web" href="/app/" hidden>On iPhone or a computer? Open Psalmist on the web</a>
+  <a class="get" id="web" href="https://psalmist-lyart.vercel.app/" hidden>On iPhone or a computer? Open Psalmist on the web</a>
   <br><a class="get" href="https://github.com/coxy-trophy/psalmist-releases/releases/latest">Don't have Psalmist? Download it for Android</a>
   <br><a class="get" id="jw" hidden>Or listen on jw.org</a>
   <small>Psalmist is an unofficial app for the music published on jw.org.</small>
@@ -79,7 +79,7 @@
   // Not Android: the web version of Psalmist opens the same link.
   if (!/Android/i.test(navigator.userAgent)) {
     var web = document.getElementById("web");
-    web.href = "/app/#/open?" + location.hash.slice(1);
+    web.href = "https://psalmist-lyart.vercel.app/#/open?" + location.hash.slice(1);
     web.hidden = false;
     document.getElementById("open").href = web.href;
   }

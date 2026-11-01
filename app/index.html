@@ -2,22 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Psalmist</title>
-<meta name="description" content="All the music, videos and songs from jw.org, in one place. An unofficial app.">
-<meta name="theme-color" content="#09090C">
-<meta name="color-scheme" content="dark">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Psalmist">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <script type="module" crossorigin src="/app/assets/index-Cta2Extk.js"></script>
-  <link rel="stylesheet" crossorigin href="/app/assets/index-DNTyBTn3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psalmist has moved</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box; text-align: center;
+         background: #09090C; color: #F4F4F5; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 420px; }
+  p { color: #A1A1AA; line-height: 1.5; }
+  a, button { display: block; width: 100%; box-sizing: border-box; margin-top: 12px; padding: 15px; border: 0; border-radius: 14px; font: 700 17px system-ui, sans-serif; text-decoration: none; cursor: pointer; }
+  button { background: #292932; color: #FF4F7B; }
+  a { background: #FF4F7B; color: #fff; }
+</style>
 </head>
 <body>
-<div id="app"></div>
+<main id="moved" hidden>
+  <h1>Psalmist has moved</h1>
+  <p>Your liked songs and playlists are saved in this browser under the old address. Save a backup, then open Psalmist and choose <strong>Settings › Restore a backup</strong>.</p>
+  <button id="save">Save my backup</button>
+  <a id="go">Open Psalmist</a>
+</main>
+<script>
+  // Saved data belongs to an address, so it can't follow people to the new one by itself.
+  var target = "https://psalmist-lyart.vercel.app/" + location.hash;
+  var keys = ["liked", "playlists", "history", "plays", "signals", "recentSearches", "collectionLanguages", "recentLanguages", "language", "watchedVideos"];
+  function read(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
+  var hasLibrary = false;
+  try { hasLibrary = (read("liked") || []).length > 0 || (read("playlists") || []).length > 0; } catch (e) {}
+  if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then(function (r) { r.forEach(function (x) { x.unregister(); }); });
+  if (!hasLibrary) {
+    location.replace(target);
+  } else {
+    document.getElementById("moved").hidden = false;
+    document.getElementById("go").href = target;
+    document.getElementById("save").onclick = function () {
+      var data = {};
+      keys.forEach(function (k) { data[k] = read(k); });
+      var blob = new Blob([JSON.stringify({ app: "psalmist-web", version: 1, savedAt: new Date().toISOString(), data: data })], { type: "application/json" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "psalmist-backup.json";
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+    };
+  }
+</script>
 </body>
 </html>
