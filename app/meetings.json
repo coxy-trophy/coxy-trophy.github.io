@@ -1,51 +1,6 @@
 {
- "generated": "2026-10-29T15:34:03.837116+00:00",
+ "generated": "2026-11-02T11:02:56.639559+00:00",
  "weeks": [
-  {
-   "monday": "2026-10-19",
-   "dates": "October 19-25",
-   "midweek": {
-    "title": "Midweek Meeting",
-    "subtitle": "Jeremiah 45-46",
-    "songs": [
-     {
-      "label": "Opening song",
-      "number": 21
-     },
-     {
-      "label": "Middle song",
-      "number": 117
-     },
-     {
-      "label": "Closing song",
-      "number": 87
-     }
-    ],
-    "videos": [
-     {
-      "pub": "pk",
-      "issue": null,
-      "track": 10,
-      "title": "Become Jehovah’s Friend​—Be Kind and Share"
-     }
-    ]
-   },
-   "weekend": {
-    "title": "Weekend Meeting",
-    "subtitle": "An Appeal on the Basis of Love",
-    "songs": [
-     {
-      "label": "Watchtower Study",
-      "number": 106
-     },
-     {
-      "label": "Closing song",
-      "number": 154
-     }
-    ],
-    "videos": []
-   }
-  },
   {
    "monday": "2026-10-26",
    "dates": "October 26–November 1",
@@ -220,6 +175,51 @@
      {
       "label": "Closing song",
       "number": 57
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-11-23",
+   "dates": "November 23-29",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Lamentations 3-5",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 158
+     },
+     {
+      "label": "Middle song",
+      "number": 109
+     },
+     {
+      "label": "Closing song",
+      "number": 74
+     }
+    ],
+    "videos": [
+     {
+      "pub": "jwb-130",
+      "issue": null,
+      "track": 5,
+      "title": "Comfort for the Caregiver"
+     }
+    ]
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "How the Priesthood Reveals Jehovah’s Love",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 107
+     },
+     {
+      "label": "Closing song",
+      "number": 16
      }
     ],
     "videos": []
