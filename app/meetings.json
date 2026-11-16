@@ -1,51 +1,6 @@
 {
- "generated": "2026-11-12T11:05:47.896877+00:00",
+ "generated": "2026-11-16T11:15:14.047396+00:00",
  "weeks": [
-  {
-   "monday": "2026-11-02",
-   "dates": "November 2-8",
-   "midweek": {
-    "title": "Midweek Meeting",
-    "subtitle": "Jeremiah 49-50",
-    "songs": [
-     {
-      "label": "Opening song",
-      "number": 1
-     },
-     {
-      "label": "Middle song",
-      "number": 44
-     },
-     {
-      "label": "Closing song",
-      "number": 33
-     }
-    ],
-    "videos": [
-     {
-      "pub": "jwb-107",
-      "issue": null,
-      "track": 7,
-      "title": ""
-     }
-    ]
-   },
-   "weekend": {
-    "title": "Weekend Meeting",
-    "subtitle": "Trust In Jehovah for Protection",
-    "songs": [
-     {
-      "label": "Watchtower Study",
-      "number": 3
-     },
-     {
-      "label": "Closing song",
-      "number": 8
-     }
-    ],
-    "videos": []
-   }
-  },
   {
    "monday": "2026-11-09",
    "dates": "November 9-15",
@@ -227,6 +182,44 @@
      {
       "label": "Closing song",
       "number": 124
+     }
+    ],
+    "videos": []
+   }
+  },
+  {
+   "monday": "2026-12-07",
+   "dates": "December 7-13",
+   "midweek": {
+    "title": "Midweek Meeting",
+    "subtitle": "Ezekiel 3-4",
+    "songs": [
+     {
+      "label": "Opening song",
+      "number": 71
+     },
+     {
+      "label": "Middle song",
+      "number": 161
+     },
+     {
+      "label": "Closing song",
+      "number": 7
+     }
+    ],
+    "videos": []
+   },
+   "weekend": {
+    "title": "Weekend Meeting",
+    "subtitle": "Show Yourself Thankful​—Why and How?",
+    "songs": [
+     {
+      "label": "Watchtower Study",
+      "number": 46
+     },
+     {
+      "label": "Closing song",
+      "number": 139
      }
     ],
     "videos": []
